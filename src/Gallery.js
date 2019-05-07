@@ -4,6 +4,7 @@ import GalleryItem from "./GalleryItem";
 
 import NoResults from "./NoResults";
 
+import SearchForm from "./SearchForm";
 
 
 const Gallery = props => {
@@ -45,7 +46,7 @@ const Gallery = props => {
   return (
 
     <div className="photo-container">
-
+   <h1>gifs</h1>
       <ul>{images}</ul>
 
     </div>

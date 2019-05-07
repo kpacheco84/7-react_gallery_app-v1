@@ -73,7 +73,7 @@ export default class App extends Component {
 
 
 
-  //Setup the function to perform searching the flickr api
+  //function for searching flickr through API
 
   performSearch = topic => {
 
