@@ -5,7 +5,7 @@ import GalleryItem from "./GalleryItem";
 import NoResults from "./NoResults";
 
 import SearchForm from "./SearchForm";
-
+//import App,{topic} from './App';
 
 const Gallery = props => {
 
@@ -14,7 +14,7 @@ const Gallery = props => {
   let data = props.data;
 
   let images;
-
+  
   //Map over the images and drop each into a Gallery Item
 
   if (data.length > 0) {
@@ -46,7 +46,7 @@ const Gallery = props => {
   return (
 
     <div className="photo-container">
-   <h1>gifs</h1>
+   <h1>{`${props.topic} gifs`}</h1>
       <ul>{images}</ul>
 
     </div>

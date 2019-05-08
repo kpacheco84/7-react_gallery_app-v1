@@ -16,8 +16,8 @@ class SearchForm extends Component {
 
   onSearchChange = e => {
 
-    this.setState({ searchText: e.target.value });
-
+   this.setState({ searchText: e.target.value })
+ 
   };
 
   handleSubmit = e => {
@@ -88,6 +88,6 @@ class SearchForm extends Component {
 
 }
 
-
+console.log('need string')
 
 export default withRouter(SearchForm);

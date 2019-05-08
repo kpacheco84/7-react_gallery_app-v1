@@ -14,21 +14,21 @@ import {
 
 } from "react-router-dom";
 
-import apiKey from "./config.js";
+import apiKey from "./components/config.js";
 
 
 
 //App components
 
-import Header from "./Header";
+import Header from "./components/Header";
 
-import Home from "./Home";
+import Home from "./components/Home";
 
-import SearchForm from "./SearchForm";
+import SearchForm from "./components/SearchForm";
 
-import Gallery from "./Gallery";
+import Gallery from "./components/Gallery";
 
-import NotFound from "./NotFound";
+import NotFound from "./components/NotFound";
 
 
 export default class App extends Component {
@@ -157,7 +157,7 @@ export default class App extends Component {
 
                 path="/cats"
 
-                render={() => <Gallery data={this.state.cats} />}
+                render={() => <Gallery topic="cat" data={this.state.cats} />}
 
               />
 
@@ -175,7 +175,7 @@ export default class App extends Component {
 
                 path="/dogs"
 
-                render={() => <Gallery data={this.state.dogs} />}
+                render={() => <Gallery topic="dog" data={this.state.dogs} />}
 
               />
 
@@ -193,7 +193,7 @@ export default class App extends Component {
 
                 path="/computers"
 
-                render={() => <Gallery data={this.state.computers} />}
+                render={() => <Gallery topic="computer" data={this.state.computers} />}
 
               />
 
@@ -209,10 +209,10 @@ export default class App extends Component {
 
                 path="/search/:topic"
 
-                render={() => <Gallery data={this.state.images} />}
+                render={({match}) => <Gallery topic={match.params.topic} data={this.state.images} />}
 
               />
-
+              
             )}
 
             <Route component={NotFound} />
