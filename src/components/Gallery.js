@@ -4,7 +4,6 @@ import GalleryItem from "./GalleryItem";
 
 import NoResults from "./NoResults";
 
-import SearchForm from "./SearchForm";
 //import App,{topic} from './App';
 
 const Gallery = props => {
